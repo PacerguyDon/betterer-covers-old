@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Archivo+Black&family=Bebas+Neue&family=Bricolage+Grotesque:wght@600;700;800&family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:wght@600;700&family=DM+Serif+Display:ital@0;1&family=Fjalla+One&family=Orbitron:wght@600;700;800&family=Oswald:wght@500;600;700&family=Playfair+Display:wght@700;800;900&family=Prata&family=Righteous&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Syne:wght@500;700;800&family=Teko:wght@500;600;700&family=Unbounded:wght@600;700;800&display=swap');
+
+:root {
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-ui-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-display: 'Syne', sans-serif;
+
+  --page: #0c0c0c;
+  --page-deep: #090909;
+  --panel: #151515;
+  --panel-raised: #1c1c1c;
+  --panel-border: rgba(255, 255, 255, 0.07);
+  --panel-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.52),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  --heading: #f2f2f2;
+  --text: #c8c8c8;
+  --soft-text: #8e8e8e;
+  --muted: #636363;
+  --line-strong: rgba(255, 255, 255, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--page);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: var(--font-body);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.035), transparent 26%),
+    linear-gradient(180deg, var(--page-deep), var(--page));
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  mix-blend-mode: overlay;
+}
+
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
