@@ -7,21 +7,6 @@ import type {
 async function fetchJson<T>(input: string, signal?: AbortSignal): Promise<T> {
   const response = await fetch(input, { signal })
 
-  if (!response.ok) {
-    let message = `Request failed: ${response.status} ${response.statusText}`
-
-    try {
-      const payload = (await response.json()) as { message?: string }
-      if (payload?.message) {
-        message = payload.message
-      }
-    } catch {
-      // Ignore JSON parsing failures and fall back to the status text.
-    }
-
-      return {} as T
-  }
-
   return (await response.json()) as T
 }
 
