@@ -7,13 +7,11 @@ import type {
 async function fetchJson<T>(input: string, signal?: AbortSignal): Promise<T> {
   try {
     const response = await fetch(input, { signal });
+    if (!response.ok) return {} as T;
     return (await response.json()) as T;
   } catch (e) {
-    return null as any;
+    return {} as T; 
   }
-}
-
-
 export function fetchTraktContext(signal?: AbortSignal) {
   return fetchJson<TraktContext>('/api/trakt/context', signal)
 }
