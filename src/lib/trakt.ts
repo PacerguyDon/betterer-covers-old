@@ -2,6 +2,7 @@ import type { TraktContext, TraktList, TraktListItem } from '../types'
 
 async function fetchJson<T>(input: string, signal?: AbortSignal): Promise<T> {
   const response = await fetch(input, { signal });
+  if (!response.ok) return {} as T;
   return (await response.json()) as T;
 }
 
@@ -17,8 +18,6 @@ export function fetchListItemsForUser({ user, slug, signal }: { user: string; sl
   return fetchJson<TraktListItem[]>(`/api/trakt/users/${encodeURIComponent(user)}/lists/${encodeURIComponent(slug)}/items`, signal);
 }
 
-export function toPosterProxyUrl(url: string, type?: any, size?: any) {
-  return url;
+export function toPosterProxyUrl(url: string | null, _type?: any, _size?: any) {
+  return url ?? '';
 }
-
-
