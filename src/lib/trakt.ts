@@ -1,13 +1,34 @@
 import type { TraktContext, TraktList, TraktListItem } from '../types'
 
-export async function fetchTraktContext(): Promise<TraktContext | null> {
-  return null;
+async function fetchJson<T>(input: string, signal?: AbortSignal): Promise<T> {
+  const response = await fetch(input, { signal })
+  return (await response.json()) as T
 }
 
-export async function fetchListsForUser(_user: string): Promise<TraktList[]> {
-  return [];
+export function fetchTraktContext(signal?: AbortSignal) {
+  return fetchJson<TraktContext>('/api/trakt/context', signal)
 }
 
-export async function fetchListItemsForUser(_args: { user: string; slug: string }): Promise<TraktListItem[]> {
-  return [];
+export function fetchListsForUser(user: string, signal?: AbortSignal) {
+  return fetchJson<TraktList[]>(
+    `/api/trakt/users/${encodeURIComponent(user)}/lists`,
+    signal,
+  )
+}
+
+export function fetchListItemsForUser({
+  user,
+  slug,
+  signal,
+}: {
+  user: string
+  slug: string
+  signal?: AbortSignal
+}) {
+  return fetchJson<TraktListItem[]>(
+    `/api/trakt/users/${encodeURIComponent(user)}/lists/${encodeURIComponent(
+      slug,
+    )}/items`,
+    signal,
+  )
 }
