@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // This fix solves the 404 by pointing to your specific repo folder
-  base: '/betterer-covers/', 
+  base: '/', 
   server: {
     proxy: {
       '/api': 'http://localhost:8787',
