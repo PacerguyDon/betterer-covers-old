@@ -574,9 +574,7 @@ function App() {
       try {
         const nextItems = await fetchListItemsForUser(
           activeUser,
-          // @ts-ignore
           selectedSlug,
-          // @ts-ignore
           controller.signal,
         )
         setItems(nextItems)
