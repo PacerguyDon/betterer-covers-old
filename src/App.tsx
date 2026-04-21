@@ -198,13 +198,18 @@ function chooseInitialList(lists: TraktList[]) {
   ]
 
     // 1. Add (lists || []) to the map
+    // Array.from(lists || []) is the safest way to ensure .find exists
   const exactMatch = preferredNames
-    .map((name) => (lists || []).find((list) => list.name === name))
+    .map((name) => Array.from(lists || []).find((list) => list?.name === name))
     .find(Boolean)
 
   if (exactMatch) {
     return exactMatch
   }
+
+  // Use the same safety check here at the bottom
+  return Array.from(lists || []).find((list) => detectBrand(list?.name ?? '')) ?? (lists?.[0] || null)
+
 
   // 2. Add (lists || []) to the brand detection and the final fallback
   return (lists || []).find((list) => detectBrand(list?.name)) ?? (lists?.[0] || null)
