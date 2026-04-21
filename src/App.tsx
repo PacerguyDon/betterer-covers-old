@@ -678,8 +678,9 @@ function App() {
   }
 
   function handleLoadUser(nextUser = sourceUserInput) {
+    // This prevents the "undefined is not an object" crash
     const normalizedUser = nextUser ? nextUser.trim() : "";
-    if (!normalizedUser || normalizedUser === activeUser) {
+     if (!normalizedUser || normalizedUser === activeUser) {
       return
     }
 
