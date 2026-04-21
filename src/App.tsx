@@ -428,7 +428,7 @@ function App() {
         ? detectedBrand.label
         : 'No brand detected'
       : 'Custom text'
-  const normalizedSourceUser = sourceUserInput.trim()
+  const normalizedSourceUser = sourceUserInput?.trim()
   const sourceSuggestions = recentUsers.filter((user) => {
     if (user === activeUser) {
       return false
