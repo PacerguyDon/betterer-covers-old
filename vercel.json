@@ -1,15 +1,9 @@
 {
   "version": 2,
-  "functions": {
-    "api/*.mjs": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  },
   "rewrites": [
     {
-      "source": "/media.trakt.tv/(.*)",
-      "destination": "/api/trakt/poster?src=https://trakt.tv"
+      "source": "/api/trakt/poster",
+      "destination": "/api/index.mjs"
     },
     {
       "source": "/api/(.*)",
