@@ -340,11 +340,11 @@ app.get('/api/trakt/poster', async (request, response) => {
     response.status(400).json({ message: 'A poster source URL is required.' })
     return
   }
-
-  if (!isAllowedRemoteHost(src)) {
-    response.status(400).json({ message: 'That poster host is not allowed.' })
-    return
-  }
+ 
+  // if (!isAllowedRemoteHost(src)) {
+    // response.status(400).json({ message: 'That poster host is not allowed.' })
+    // return
+  // }
 
   try {
     const remoteResponse = await fetch(src)
