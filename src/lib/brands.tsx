@@ -143,6 +143,87 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     logoWidth: '35%',
     aspectRatio: 150 / 150,
   },
+  {
+    id: 'cbs',
+    label: 'Cbs',
+    kind: 'mask',
+    asset: '/logos/cbs.svg',
+    accent: '#005daa',
+    logoWidth: '50%',
+    aspectRatio: 1000 / 288,
+  },
+  {
+    id: 'fox',
+    label: 'Fox',
+    kind: 'mask',
+    asset: '/logos/fox.svg',
+    accent: '003366',
+    logoWidth: '50%',
+    aspectRatio: 1000 / 422,
+  },
+  {
+    id: 'history',
+    label: 'History',
+    kind: 'mask',
+    asset: '/logos/history.svg',
+    accent: 'f7a800',
+    logoWidth: '50%',
+    aspectRatio: 1000 / 1049,
+  },
+  {
+    id: 'lifetime',
+    label: 'Lifetime',
+    kind: 'mask',
+    asset: '/logos/lifetime.svg',
+    accent: '#c2002f',
+    logoWidth: '50%',
+    aspectRatio: 897 / 272,
+  },
+  {
+    id: 'anc-plus',
+    label: 'Amc Plus',
+    kind: 'mask',
+    asset: '/logos/amc-plus.svg',
+    accent: '#00eee6',
+    logoWidth: '65%',
+    aspectRatio: 200 / 150,
+  },
+  {
+    id: 'a&e',
+    label: 'A&E',
+    kind: 'mask',
+    asset: '/logos/a&e.svg',
+    accent: '#000000',
+    logoWidth: '50%',
+    aspectRatio: 289 / 150,
+  },
+  {
+    id: 'commedy-central',
+    label: 'Commedy Central',
+    kind: 'mask',
+    asset: '/logos/commedy-central.svg',
+    accent: '#fdc600',
+    logoWidth: '50%',
+    aspectRatio: 1000 / 345,
+  },
+  {
+    id: 'investigation-discovery',
+    label: 'Investigation Discovery',
+    kind: 'mask',
+    asset: '/logos/investigation-discovery.svg',
+    accent: '#e21f26',
+    logoWidth: '50%',
+    aspectRatio: 212 / 200,
+  },
+  {
+    id: 'the-wb',
+    label: 'The WB',
+    kind: 'mask',
+    asset: '/logos/the-wb.svg',
+    accent: '#002272',
+    logoWidth: '50%',
+    aspectRatio: 248 / 127,
+  },
 ]
 
 const FALLBACK_ACCENTS = [
@@ -248,6 +329,41 @@ export function detectBrand(name: string) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'abc') ?? null
   }
 
+  if (/\bcbs\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'cbs') ?? null
+  }
+
+  if (/\bfox\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'fox') ?? null
+  }
+
+  if (/\bnbc\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'nbc') ?? null
+  }
+
+  if (/\blifetime\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'lifetime') ?? null
+  }
+
+  if (/\bhistory\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'history') ?? null
+  }
+
+   if (/\bamc\?+\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'amc-plus') ?? null
+  }
+
+   if (/\bcommedy\?central\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'commedy-central') ?? null
+  }
+
+   if (/\binvestigation\?ldiscovery\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'investigation-discovery') ?? null
+  }
+
+   if (/\bthe\?wb\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'the-wb') ?? null
+  }
 
   return null
 }
