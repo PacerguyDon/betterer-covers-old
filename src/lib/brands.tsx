@@ -126,7 +126,6 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     aspectRatio: 1000 / 346,
   },
 ]
-]
 
 const FALLBACK_ACCENTS = [
   '#f08a4b',
