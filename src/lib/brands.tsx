@@ -59,7 +59,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     kind: 'mask',
     asset: '/logos/discovery.svg',
     accent: '#ff5313',
-    logoWidth: '50%',
+    logoWidth: '60%',
     aspectRatio: 1000 / 207,
   },
   {
@@ -140,7 +140,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     kind: 'mask',
     asset: '/logos/abc.svg',
     accent: '#000000',
-    logoWidth: '46%',
+    logoWidth: '35%',
     aspectRatio: 150 / 150,
   },
 ]
