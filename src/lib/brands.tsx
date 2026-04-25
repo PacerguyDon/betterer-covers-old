@@ -132,7 +132,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     asset: '/logos/tv-land.svg',
     accent: '#00a9e0',
     logoWidth: '50%',
-    aspectRatio: 1000 / 346,
+    aspectRatio: 2500 / 2500,
   },
   {
     id: 'abc',
