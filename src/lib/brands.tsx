@@ -116,6 +116,16 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     logoWidth: '50%',
     aspectRatio: 1000 / 401,
   },
+  {
+    id: 'tv-land',
+    label: 'TV Land',
+    kind: 'mask',
+    asset: '/logos/tv-landsvg',
+    accent: '#00a9e0',
+    logoWidth: '50%',
+    aspectRatio: 1000 / 346,
+  },
+]
 ]
 
 const FALLBACK_ACCENTS = [
