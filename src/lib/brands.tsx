@@ -54,6 +54,15 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     aspectRatio: 45.046 / 17.091,
   },
   {
+    id: 'discovery',
+    label: 'Discovery',
+    kind: 'mask',
+    asset: '/logos/discovery.svg',
+    accent: '#ff5313',
+    logoWidth: '50',
+    aspectRatio: 1000/ 207,
+  },
+  {
     id: 'disney-plus',
     label: 'Disney+',
     kind: 'mask',
@@ -220,6 +229,10 @@ export function detectBrand(name: string) {
 
    if (/\btv\?land\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'tv-land') ?? null
+  }
+
+  if (/\bdiscovery\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'discovery') ?? null
   }
 
   return null
