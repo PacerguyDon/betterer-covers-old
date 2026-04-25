@@ -201,6 +201,14 @@ export function detectBrand(name: string) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'max') ?? null
   }
 
+   if (/\bmax\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'max') ?? null
+  }
+
+    if (/\bthe[- ]?cw\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'the-cw') ?? null
+  }
+
   return null
 }
 
