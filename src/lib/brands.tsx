@@ -55,7 +55,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
   },
   {
     id: 'discovery',
-    label: 'Discovery',
+    label: 'Discovery Channel',
     kind: 'mask',
     asset: '/logos/discovery.svg',
     accent: '#ff5313',
