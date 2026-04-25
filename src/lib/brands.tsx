@@ -162,6 +162,15 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     aspectRatio: 1000 / 422,
   },
   {
+    id: 'nbc',
+    label: 'Nbc',
+    kind: 'mask',
+    asset: '/logos/nbc.svg',
+    accent: '#0089d0',
+    logoWidth: '35%',
+    aspectRatio: 567 / 599,
+  },
+  {
     id: 'history',
     label: 'History',
     kind: 'mask',
