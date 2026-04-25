@@ -221,7 +221,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     kind: 'mask',
     asset: '/logos/investigation-discovery.svg',
     accent: '#e21f26',
-    logoWidth: '50%',
+    logoWidth: '40%',
     aspectRatio: 212 / 200,
   },
   {
