@@ -310,7 +310,7 @@ export function detectBrand(name: string) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'hulu') ?? null
   }
   
-    if (/\bpeacock\b/.test(lowerName)) {
+  if (/\bpeacock\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'peacock') ?? null
   }
 
@@ -322,15 +322,19 @@ export function detectBrand(name: string) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'max') ?? null
   }
 
-    if (/\bthe[- ]?cw\b/.test(lowerName)) {
+   if (/\bthe[- ]?cw\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'the-cw') ?? null
   }
 
-     if (/\btv[- ]?land\b/.test(lowerName)) {
+  if (/\btv[- ]?land\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'tv-land') ?? null
   }
 
-     if (/\bdiscovery\b/.test(lowerName)) {
+  if (/\binvestigation[- ]?discovery\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'investigation-discovery') ?? null
+  }
+
+  if (/\bdiscovery\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'discovery') ?? null
   }
 
@@ -358,20 +362,20 @@ export function detectBrand(name: string) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'history') ?? null
   }
 
-   if (/\bamc\?+\b/.test(lowerName)) {
+  if (/\bamc\b\s*(?:\+|-?plus)?/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'amc-plus') ?? null
   }
 
-   if (/\bcomedy[- ]?central\b/.test(lowerName)) {
+  if (/\bcomedy[- ]?central\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'comedy-central') ?? null
   }
 
-    if (/\binvestigation[- ]?discovery\b/.test(lowerName)) {
-    return BRAND_LIBRARY.find((brand) => brand.id === 'investigation-discovery') ?? null
+  if (/\bthe\?wb\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'the-wb') ?? null
   }
 
-   if (/\bthe\?wb\b/.test(lowerName)) {
-    return BRAND_LIBRARY.find((brand) => brand.id === 'the-wb') ?? null
+  if (/\ba\s*(?:&|and)\s*e\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'a-e') ?? null 
   }
 
   return null
