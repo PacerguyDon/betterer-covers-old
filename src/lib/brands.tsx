@@ -189,7 +189,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     aspectRatio: 897 / 272,
   },
   {
-    id: 'anc-plus',
+    id: 'amc-plus',
     label: 'Amc Plus',
     kind: 'mask',
     asset: '/logos/amc-plus.svg',
@@ -207,10 +207,10 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     aspectRatio: 289 / 150,
   },
   {
-    id: 'commedy-central',
-    label: 'Commedy Central',
+    id: 'comedy-central',
+    label: 'Comedy Central',
     kind: 'mask',
-    asset: '/logos/commedy-central.svg',
+    asset: '/logos/comedy-central.svg',
     accent: '#fdc600',
     logoWidth: '50%',
     aspectRatio: 1000 / 345,
@@ -370,12 +370,12 @@ export function detectBrand(name: string) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'comedy-central') ?? null
   }
 
-  if (/\bthe\?wb\b/.test(lowerName)) {
+  if (/\bthe[- ]?wb\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'the-wb') ?? null
   }
 
   if (/\ba\s*(?:&|and)\s*e\b/.test(lowerName)) {
-    return BRAND_LIBRARY.find((brand) => brand.id === 'a-e') ?? null 
+    return BRAND_LIBRARY.find((brand) => brand.id === 'a&e') ?? null 
   }
 
   return null
