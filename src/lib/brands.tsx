@@ -95,7 +95,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     kind: 'mask',
     asset: '/logos/peacock.svg',
     accent: '#ff6600',
-    logoWidth: '50%',
+    logoWidth: '60%',
     aspectRatio: 179 / 55,
   },
   {
