@@ -105,7 +105,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     asset: '/logos/peacock.svg',
     accent: '#ff6600',
     logoWidth: '60%',
-    aspectRatio: 179 / 55,
+    aspectRatio: 196.9 / 60.5,
   },
   {
     id: 'max',
@@ -123,7 +123,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     asset: '/logos/the-cw.svg',
     accent: '#008000',
     logoWidth: '50%',
-    aspectRatio: 1000 / 401,
+    aspectRatio: 950 / 381,
   },
   {
     id: 'tv-land',
@@ -159,7 +159,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     asset: '/logos/fox.svg',
     accent: '003366',
     logoWidth: '50%',
-    aspectRatio: 1000 / 422,
+    aspectRatio: 850 / 358,
   },
   {
     id: 'nbc',
@@ -168,7 +168,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     asset: '/logos/nbc.svg',
     accent: '#0089d0',
     logoWidth: '35%',
-    aspectRatio: 567 / 599,
+    aspectRatio: 453 / 479,
   },
   {
     id: 'history',
@@ -177,7 +177,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     asset: '/logos/history.svg',
     accent: 'f7a800',
     logoWidth: '35%',
-    aspectRatio: 1000 / 1049,
+    aspectRatio: 800 / 839,
   },
   {
     id: 'lifetime',
@@ -195,7 +195,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     asset: '/logos/amc-plus.svg',
     accent: '#00eee6',
     logoWidth: '65%',
-    aspectRatio: 200 / 150,
+    aspectRatio: 210 / 157.5,
   },
   {
     id: 'a&e',
@@ -204,7 +204,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     asset: '/logos/a&e.svg',
     accent: '#000000',
     logoWidth: '40%',
-    aspectRatio: 289 / 150,
+    aspectRatio: 260 / 135,
   },
   {
     id: 'comedy-central',
@@ -222,7 +222,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     asset: '/logos/investigation-discovery.svg',
     accent: '#e21f26',
     logoWidth: '40%',
-    aspectRatio: 212 / 200,
+    aspectRatio: 180 / 170,
   },
   {
     id: 'the-wb',
