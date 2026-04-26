@@ -204,7 +204,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     asset: '/logos/a&e.svg',
     accent: '#000000',
     logoWidth: '40%',
-    aspectRatio: 260 / 135,
+    aspectRatio: 221 / 114.75,
   },
   {
     id: 'comedy-central',
