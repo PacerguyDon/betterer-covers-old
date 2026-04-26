@@ -222,7 +222,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     asset: '/logos/investigation-discovery.svg',
     accent: '#e21f26',
     logoWidth: '40%',
-    aspectRatio: 180 / 170,
+    aspectRatio: 153 / 144.5,
   },
   {
     id: 'the-wb',
