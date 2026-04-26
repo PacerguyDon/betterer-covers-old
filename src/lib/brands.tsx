@@ -60,7 +60,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     asset: '/logos/discovery.svg',
     accent: '#ff5313',
     logoWidth: '60%',
-    aspectRatio: 1000 / 207,
+    aspectRatio: 1150 / 238.05,
   },
   {
     id: 'disney-plus',
