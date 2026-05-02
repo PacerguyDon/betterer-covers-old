@@ -242,6 +242,78 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     logoWidth: '50%',
     aspectRatio: 215 / 104,
   },
+  {
+    id: '20th',
+    label: '20th Centuray Fox',
+    kind: 'mask',
+    asset: '/logos/20th.svg',
+    accent: '#f3ba2f',
+    logoWidth: '50%',
+    aspectRatio: 1000 / 821,
+  },
+  {
+    id: 'columbia',
+    label: 'Columbia',
+    kind: 'mask',
+    asset: '/logos/columbia.svg',
+    accent: '#3c2ff3',
+    logoWidth: '50%',
+    aspectRatio: 1000 / 269,
+  },
+  {
+    id: 'mgm',
+    label: 'MGM',
+    kind: 'mask',
+    asset: '/logos/mgm.svg',
+    accent: '#f3a82f',
+    logoWidth: '50%',
+    aspectRatio: 1000 / 583,
+  },
+  {
+    id: 'paramount',
+    label: 'Paramount',
+    kind: 'mask',
+    asset: '/logos/paramount.svg',
+    accent: '#035ae8',
+    logoWidth: '50%',
+    aspectRatio: 358 / 280,
+  },
+  {
+    id: 'pixar',
+    label: 'Pixar',
+    kind: 'mask',
+    asset: '/logos/pixar.svg',
+    accent: '#5e9aae',
+    logoWidth: '50%',
+    aspectRatio: 667 / 108,
+  },
+  {
+    id: 'touchstone',
+    label: 'Touchstone',
+    kind: 'mask',
+    asset: '/logos/touchstone.svg',
+    accent: '#dd1515',
+    logoWidth: '50%',
+    aspectRatio: 500 / 118,
+  },
+  {
+    id: 'universal',
+    label: 'Universal',
+    kind: 'mask',
+    asset: '/logos/universal.svg',
+    accent: '#2303f5',
+    logoWidth: '50%',
+    aspectRatio: 1000 / 529,
+  },
+  {
+    id: 'wb',
+    label: 'Warner Bros',
+    kind: 'mask',
+    asset: '/logos/wb.svg',
+    accent: '#0374f5',
+    logoWidth: '50%',
+    aspectRatio: 355 / 370,
+  },
 ]
 
 const FALLBACK_ACCENTS = [
@@ -389,6 +461,38 @@ export function detectBrand(name: string) {
   
   if (/\bhgtv\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'hgtv') ?? null
+  }
+
+  if (/\b20th\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === '20th') ?? null
+  }
+
+  if (/\bcolumbia\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'columbia') ?? null
+  }
+
+  if (/\bmgm\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'mgm') ?? null
+  }
+
+  if (/\bparamount\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'paramount') ?? null
+  }
+
+  if (/\bpixar\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'pixar') ?? null
+  }
+
+  if (/\btouchstone\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'touchstone') ?? null
+  }
+
+  if (/\buniversal\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'universal') ?? null
+  }
+
+  if (/\bwb\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'wb') ?? null
   }
 
 
