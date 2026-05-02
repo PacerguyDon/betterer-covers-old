@@ -301,9 +301,9 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     label: 'Touchstone',
     kind: 'mask',
     asset: '/logos/touchstone.svg',
-    accent: '#dd1515',
-    logoWidth: '50%',
-    aspectRatio: 500 / 118,
+    accent: '#0814eb',
+    logoWidth: '35%',
+    aspectRatio: 2000 / 817,
   },
   {
     id: 'universal',
@@ -420,7 +420,7 @@ export function detectBrand(name: string) {
     return BRAND_LIBRARY.find((brand) => brand.id === '20th-century-fox') ?? null
   }
 
-  if (/\bwarner\bbros?\b/.test(lowerName)) {
+  if (/\bwarner\s*bros?\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'warner-bros') ?? null
   }
 
