@@ -302,7 +302,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     kind: 'mask',
     asset: '/logos/touchstone.svg',
     accent: '#0814eb',
-    logoWidth: '60%',
+    logoWidth: '70%',
     aspectRatio: 2000 / 817,
   },
   {
@@ -320,7 +320,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     kind: 'mask',
     asset: '/logos/wb.svg',
     accent: '#0374f5',
-    logoWidth: '30%',
+    logoWidth: '40%',
     aspectRatio: 355 / 370,
   },
 ]
