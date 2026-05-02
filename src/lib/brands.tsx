@@ -257,7 +257,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     kind: 'mask',
     asset: '/logos/20th.svg',
     accent: '#f3ba2f',
-    logoWidth: '50%',
+    logoWidth: '30%',
     aspectRatio: 170 / 150,
   },
   {
@@ -275,7 +275,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     kind: 'mask',
     asset: '/logos/mgm.svg',
     accent: '#f3a82f',
-    logoWidth: '50%',
+    logoWidth: '30%',
     aspectRatio: 1000 / 583,
   },
   {
@@ -284,7 +284,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     kind: 'mask',
     asset: '/logos/paramount.svg',
     accent: '#035ae8',
-    logoWidth: '50%',
+    logoWidth: '30%',
     aspectRatio: 358 / 280,
   },
   {
@@ -320,7 +320,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     kind: 'mask',
     asset: '/logos/wb.svg',
     accent: '#0374f5',
-    logoWidth: '40%',
+    logoWidth: '25%',
     aspectRatio: 355 / 370,
   },
 ]
