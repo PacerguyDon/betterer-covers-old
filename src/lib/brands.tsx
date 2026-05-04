@@ -252,6 +252,15 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     aspectRatio: 2180 / 743,
   },
   {
+    id: 'marvel',
+    label: 'Marvel',
+    kind: 'mask',
+    asset: '/logos/marvel.svg',
+    accent: '#c2002f',
+    logoWidth: '50%',
+    aspectRatio: 150 / 150,
+  },
+  {
     id: 'investigation-discovery',
     label: 'Investigation Discovery',
     kind: 'mask',
@@ -433,6 +442,10 @@ export function detectBrand(name: string) {
 
   if (/\bjames\s+bond\b/.test(lowerName)) {
   return BRAND_LIBRARY.find((brand) => brand.id === 'james-bond') ?? null
+  }
+
+  if (/\bmarvel\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'marvel') ?? null
   }
   
    if (/\bangel\b/.test(lowerName)) {
