@@ -116,6 +116,15 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     logoWidth: '22%',
     aspectRatio: 1,
   },
+   {
+    id: 'james-bond',
+    label: 'James Bond',
+    kind: 'mask',
+    asset: '/logos/james-bond.svg',
+    accent: '#35c1f1',
+    logoWidth: '55%',
+    aspectRatio: 66 / 21,
+  },
   {
     id: 'angel',
     label: 'Angel Studios',
@@ -402,7 +411,10 @@ export function detectBrand(name: string) {
 
   if (/\bhulu\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'hulu') ?? null
-  }
+
+  if (/\bjames\s+bond\b|\bbond\s+video\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'james-bond') ?? null
+  }  
 
   if (/\bangel\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'angel') ?? null
