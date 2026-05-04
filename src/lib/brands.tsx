@@ -72,6 +72,15 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     aspectRatio: 1033 / 565,
   },
   {
+    id: 'dc-universe',
+    label: 'DC Universe',
+    kind: 'mask',
+    asset: '/logos/dc-universe.svg',
+    accent: '#020c19',
+    logoWidth: '43%',
+    aspectRatio: 400 / 388,
+  },
+  {
     id: 'paramount-plus',
     label: 'Paramount+',
     kind: 'mask',
@@ -427,6 +436,10 @@ export function detectBrand(name: string) {
 
   if (/\bmax\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'max') ?? null
+  }
+
+   if (/\bdc\s*universe\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'dc-universe') ?? null
   }
 
     if (/\b20th\s*century(?:\s*fox)?\b/.test(lowerName)) {
