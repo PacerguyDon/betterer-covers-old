@@ -243,6 +243,15 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     aspectRatio: 1000 / 345,
   },
   {
+    id: 'harry-potter',
+    label: 'Harry Potter',
+    kind: 'mask',
+    asset: '/logos/harry-potter.svg',
+    accent: '#fdc600',
+    logoWidth: '40%',
+    aspectRatio: 2180 / 743,
+  },
+  {
     id: 'investigation-discovery',
     label: 'Investigation Discovery',
     kind: 'mask',
@@ -440,6 +449,10 @@ export function detectBrand(name: string) {
 
    if (/\bdc\s*universe\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'dc-universe') ?? null
+  }
+
+  if (/\bharry\s*potter\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'harry-potter') ?? null
   }
 
     if (/\b20th\s*century(?:\s*fox)?\b/.test(lowerName)) {
