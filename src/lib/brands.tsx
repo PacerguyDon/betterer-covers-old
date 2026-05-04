@@ -411,6 +411,7 @@ export function detectBrand(name: string) {
 
   if (/\bhulu\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'hulu') ?? null
+  }
 
 
   if (/\bjames\bond?\b/.test(lowerName)) {
