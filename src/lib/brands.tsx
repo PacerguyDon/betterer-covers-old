@@ -413,13 +413,11 @@ export function detectBrand(name: string) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'hulu') ?? null
   }
 
-
-  if (/\bjames\bbond?\b/.test(lowerName)) {
-    return BRAND_LIBRARY.find((brand) => brand.id === 'james-bond') ?? null
-  }  
+  if (/\bjames\s+bond\b/.test(lowerName)) {
+  return BRAND_LIBRARY.find((brand) => brand.id === 'james-bond') ?? null
+  }
   
-
-  if (/\bangel\b/.test(lowerName)) {
+   if (/\bangel\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'angel') ?? null
   }
   
