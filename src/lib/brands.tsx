@@ -258,7 +258,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     asset: '/logos/marvel.svg',
     accent: '#c2002f',
     logoWidth: '50%',
-    aspectRatio: 150 / 150,
+    aspectRatio: 1008 / 224,
   },
   {
     id: 'investigation-discovery',
