@@ -162,6 +162,15 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     aspectRatio: 2500 / 2500,
   },
   {
+    id: 'star-wars',
+    label: 'Star Wars',
+    kind: 'mask',
+    asset: '/logos/star-wars.svg',
+    accent: '#4c3600',
+    logoWidth: '50%',
+    aspectRatio: 2500 / 1070,
+  },
+  {
     id: 'abc',
     label: 'Abc',
     kind: 'mask',
@@ -442,6 +451,10 @@ export function detectBrand(name: string) {
 
   if (/\bjames\s+bond\b/.test(lowerName)) {
   return BRAND_LIBRARY.find((brand) => brand.id === 'james-bond') ?? null
+  }
+
+  if (/\bstar\s+wars\b/.test(lowerName)) {
+  return BRAND_LIBRARY.find((brand) => brand.id === 'star-wars') ?? null
   }
 
   if (/\bmarvel\b/.test(lowerName)) {
