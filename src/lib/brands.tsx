@@ -68,7 +68,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     kind: 'mask',
     asset: '/logos/walt-disney-pictures.svg',
     accent: '#0d74ff',
-    logoWidth: '50%',
+    logoWidth: '35%',
     aspectRatio: 2174 / 2500,
   },
   {
