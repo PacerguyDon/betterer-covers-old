@@ -63,6 +63,15 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     aspectRatio: 1150 / 238.05,
   },
   {
+    id: 'walt-disney-pictures',
+    label: 'Walt Disney Pictures',
+    kind: 'mask',
+    asset: '/logos/walt-disney-pictures.svg',
+    accent: '#0d74ff',
+    logoWidth: '50%',
+    aspectRatio: 2174 / 2500,
+  },
+  {
     id: 'disney-plus',
     label: 'Disney+',
     kind: 'mask',
@@ -435,6 +444,9 @@ export function detectBrand(name: string) {
 
   if (/\bapple\s*tv\+?\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'apple-tv-plus') ?? null
+  }
+  if (/\bwalt\s*disney\b\s*pictures)?\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'walt-disney-pictures') ?? null
   }
 
   if (/\bdisney\+?\b/.test(lowerName)) {
