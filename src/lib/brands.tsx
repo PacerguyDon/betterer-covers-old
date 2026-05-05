@@ -445,6 +445,7 @@ export function detectBrand(name: string) {
   if (/\bapple\s*tv\+?\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'apple-tv-plus') ?? null
   }
+  
   if (/\bwalt\s*disney\b\s*pictures)?\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'walt-disney-pictures') ?? null
   }
