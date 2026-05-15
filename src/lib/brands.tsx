@@ -45,6 +45,15 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     aspectRatio: 84.6 / 26.6,
   },
   {
+    id: 'mission-impossible',
+    label: 'Mission Impossible',
+    kind: 'mask',
+    asset: '/logos/mission-impossible.svg',
+    accent: '#35c1f1',
+    logoWidth: '55%',
+    aspectRatio: 84.6 / 26.6,
+  },
+  {
     id: 'apple-tv-plus',
     label: 'Apple TV+',
     kind: 'mask',
@@ -492,6 +501,10 @@ export function detectBrand(name: string) {
 
   if (/\bharry\s*potter\b/.test(lowerName)) {
     return BRAND_LIBRARY.find((brand) => brand.id === 'harry-potter') ?? null
+  }
+
+  if (/\bmission\s*impossible\b/.test(lowerName)) {
+    return BRAND_LIBRARY.find((brand) => brand.id === 'mission-impossible') ?? null
   }
 
     if (/\b20th\s*century(?:\s*fox)?\b/.test(lowerName)) {
