@@ -50,7 +50,7 @@ const BRAND_LIBRARY: BrandDefinition[] = [
     kind: 'mask',
     asset: '/logos/mission-impossible.svg',
     accent: '#a8a9ad',
-    logoWidth: '70%',
+    logoWidth: '80%',
     aspectRatio: 84.6 / 26.6,
   },
   {
